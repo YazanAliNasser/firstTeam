@@ -12,24 +12,40 @@
     <form>
         <div class="form-group">
           <label >City</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input onBlur="cityOnChange" type="text" class="form-control" id="cityId" aria-describedby="emailHelp">
         </div>
         
         <div class="form-group">
             <label for="exampleInputEmail1">Street</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input onBlur="streetOnChange" type="text" class="form-control" id="streetId" aria-describedby="emailHelp">
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Phone number</label>
-            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input onBlur="phoneNumberOnChange" type="number" class="form-control" id="phoneNumberId" aria-describedby="emailHelp">
           </div>
         
-        
-          <a href="C:\Users\user05\Tsofen\firstTeam\firstTeam\p3">Visit our Secound page</a>      </form>
+        <script>
+        function streetOnChange(){
+          const street=document.getElementById('streetId').value;
+          localStorage.setItem("street",street);
+        }
+
+        function cityOnChange(){
+          const city=document.getElementById('cityId').value;
+          localStorage.setItem("city",city);
+        }
+
+        function phoneNumberOnChange(){
+          const city=document.getElementById('phoneNumberId').value;
+          localStorage.setItem("phoneNumber",phoneNumber);
+        }
+        </script>
+            
+          <a href="p3.html" >Visit our Secound page</a>      </form>
 
 
-
+         
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
